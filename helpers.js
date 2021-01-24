@@ -1,14 +1,16 @@
 //function getRandomNumber (size){}
 //EtmaScript6
-
+//alert('Papasito')
 let getRandomNumber = size => {
     return Math.floor(Math.random()*size)
 }
 
 let getDistance = (e,target)=> {
-    let diffX = e.offsetx - target.offsetx
-    let diffY = e.offsety - target.offsety
-    return Math.sqrt(diffX**2 + diffY**2)
+    let diffX = e.offsetX - target.x
+    let diffY = e.offsetY - target.y
+    console.log(e.offsetX)
+    console.log(target.x)
+    return Math.sqrt((diffX*diffX) + (diffY*diffY))
 }
 
 let getDistanceHint = distance => {
